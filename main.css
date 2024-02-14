@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+}
+
+*::selection {
+    background: transparent;
+  }
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #fae1dd;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    position: relative;
+    transition: opacity 0.5s;
+    cursor: pointer;
+    animation: up 3s linear infinite;
+}
+
+.container.fade-out {
+    opacity: 0;
+}
+
+p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: xx-large;
+    margin-top: -50px;
+    padding: 15%;
+    font-style: italic;
+}
+
+button {
+    font-size: xx-large;
+    padding: 0.75em;
+    border: none;
+    font-family: 'Brush Script MT', cursive;
+}
+
+#yesBtn {
+    transform: translate(-100%, 0);
+}
+
+#noBtn {
+    position: absolute;
+}
+
+@keyframes up {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-30px);
+    }
+}
